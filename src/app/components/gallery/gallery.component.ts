@@ -58,7 +58,7 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    gsapFromTo(this.gallery.nativeElement, { 'xPercent': '-100' }, { 'xPercent': '0' })
+    gsapFromTo(this.gallery.nativeElement, { 'xPercent': '200', 'duration': '2' }, { 'xPercent': '0', 'duration': '2' })
     gsapFromTo(this.info.nativeElement, { 'opacity': '0' }, { 'opacity': '1' })
     gsapFromTo(this.gallery.nativeElement, { 'opacity': '1' }, { 'opacity': '0' }, '75% center', 'bottom top')
     gsapFromTo(this.info.nativeElement, { 'opacity': '1' }, { 'opacity': '0' }, '75% center', 'bottom top')

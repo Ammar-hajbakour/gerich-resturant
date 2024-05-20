@@ -17,8 +17,8 @@ export class ChefComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     gsapFromTo(this.chefImg.nativeElement, { 'xPercent': '-50', 'yPrecent': '-50', 'rotate': 90 }, { 'xPercent': '0', 'yPrecent': '0', 'rotate': '0' })
-    gsapFromTo(this.chefImg.nativeElement, { 'xPercent': '0', 'yPrecent': '0', 'rotate': '0' }, { 'xPercent': '-50', 'yPrecent': '-50', 'rotate': 90 }, '75% center', 'bottom top')
+    // gsapFromTo(this.chefImg.nativeElement, { 'xPercent': '0', 'yPrecent': '0', 'rotate': '0' }, { 'xPercent': '-50', 'yPrecent': '-50', 'rotate': 90 }, '75% center', 'bottom top')
     gsapFromTo(this.chefInfo.nativeElement, { 'xPercent': '20' }, { 'xPercent': '0' })
-    gsapFromTo(this.chefInfo.nativeElement, { 'xPercent': '0' }, { 'xPercent': '20' }, '75% center', 'bottom top')
+    // gsapFromTo(this.chefInfo.nativeElement, { 'xPercent': '0' }, { 'xPercent': '20' }, '75% center', 'bottom top')
   }
 }

@@ -51,7 +51,7 @@ export class SpecialMenuComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    gsapFromTo(this.menuImage.nativeElement, { 'scale': 0.5, 'opacity': 0 }, { 'scale': 1, 'opacity': '1' })
+    gsapFromTo(this.menuImage.nativeElement, { 'opacity': 0, 'delay': '0.5' }, { 'opacity': '1', 'delay': '0.5' })
     gsapFromTo(this.wineSection.nativeElement, { 'x': '150', 'opacity': '0' }, { 'x': '0', 'opacity': '1' })
     gsapFromTo(this.cocktailSection.nativeElement, { 'x': '-150', 'opacity': '0' }, { 'x': '0', 'opacity': '1' })
   }

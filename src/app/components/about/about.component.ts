@@ -17,7 +17,7 @@ export class AboutComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     gsapFrom(this.knife.nativeElement, { 'yPercent': '50' })
-    gsapFrom(this.aboutSection.nativeElement, { 'xPercent': '-50' })
-    gsapFrom(this.historySection.nativeElement, { 'xPercent': '50' })
+    gsapFrom(this.aboutSection.nativeElement, { 'xPercent': '-20' })
+    gsapFrom(this.historySection.nativeElement, { 'xPercent': '20' })
   }
 }
