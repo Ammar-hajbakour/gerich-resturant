@@ -1,0 +1,55 @@
+<nav class="app__navbar">
+  <div class="app__navbar-logo">
+    <img src="assets/logo.png" alt="app logo" />
+    <h1>Gerich</h1>
+  </div>
+  <ng-container [ngTemplateOutlet]="navbarLinks"></ng-container>
+
+  <div class="app__navbar-login">
+    <a href="#login" class="p__opensans">Log In / Register</a>
+    <div class="divider"></div>
+    <a href="/" class="p__opensans">Book Table</a>
+  </div>
+
+  <div class="app__navbar-smallscreen">
+    <img
+      src="assets/burger-menu.svg"
+      alt=""
+      width="40px"
+      class="burger-icon"
+      (click)="openMenu()"
+    />
+    @if(toggleMenu()){
+    <div class="app__navbar-smallscreen_overlay flex__center slide-bottom">
+      <img
+        src="assets/close-menu.png"
+        alt=""
+        width="35px"
+        class="overlay__close"
+        (click)="closeMenu()"
+      />
+      <ng-container [ngTemplateOutlet]="navbarLinks"></ng-container>
+    </div>
+    }
+  </div>
+</nav>
+
+<ng-template #navbarLinks let-links>
+  <ul class="app__navbar-links">
+    <li class="p__opensans">
+      <a href="#home">Home</a>
+    </li>
+    <li class="p__opensans">
+      <a href="#about">About</a>
+    </li>
+    <li class="p__opensans">
+      <a href="#menu">Menu</a>
+    </li>
+    <li class="p__opensans">
+      <a href="#awards">Awards</a>
+    </li>
+    <li class="p__opensans">
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+</ng-template>

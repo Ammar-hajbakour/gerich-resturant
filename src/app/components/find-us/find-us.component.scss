@@ -1,0 +1,15 @@
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+.app__wrapper_info{
+  flex: 1;
+  min-width: 375px;
+}
+.app__wrapper_img img{
+  width: 80%;
+  min-width: 375px;
+}

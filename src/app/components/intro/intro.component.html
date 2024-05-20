@@ -1,0 +1,15 @@
+<div class="app__video">
+  <video #vidRef loop muted>
+    <source src="assets/meal.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="app__video-overlay flex__center">
+    <div (click)="handlePlay()" class="app__video-overlay_circle flex__center">
+      @if(!playVideo()){
+      <img src="assets/play.png" alt="play" />
+      } @else {
+      <img src="assets/stop.png" alt="stop" />
+      }
+    </div>
+  </div>
+</div>

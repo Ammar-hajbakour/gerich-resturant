@@ -1,0 +1,20 @@
+<div class="app__bg app__wapper" id="awards">
+  <div class="wrapper section__padding">
+    <div #infoSection class="app__wrapper_info">
+      <sub-heading title="Awards & Recognition"></sub-heading>
+      <h1 class="headtext__cormorant">Our Laurels</h1>
+      <div class="app__laurels_awards">
+        @for(award of awards(); track award.title){
+        <award-card [award]="award"></award-card>
+        }
+      </div>
+    </div>
+    <div #imageSection class="app__wrapper_img">
+      <img
+        style="width: 80%; min-width: 375px"
+        src="assets/laurels.png"
+        alt="laurels"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="wrapper app__gallery section__padding">
+  <div #info class="app__gallery-content">
+    <sub-heading title="Instagram"></sub-heading>
+    <h1 class="headtext__cormorant">Photo Gallery</h1>
+    <p class="p__opensans" style="color: var(--color-grey); margin: 2rem 0">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis
+      ipsum turpis elit elit scelerisque egestas mu.
+    </p>
+    <button type="button" class="custom__button">View More</button>
+  </div>
+  <div #gallery class="app__gallery-images">
+    <div #scrollRef class="app__gallery-images_container">
+      @for(imgUrl of galleryImages(); track $index){
+      <div class="app__gallery-images_card flex__center">
+        <img [src]="imgUrl" alt="gallery" />
+        <img
+          class="gallery__image-icon"
+          src="assets/instagram.png"
+          alt="instagram"
+        />
+      </div>
+      }
+    </div>
+
+    <div class="app__gallery-images_arrows">
+      <div
+        class="gallery__arrow-icon gallery__arrow--left"
+        (click)="scroll('left')"
+      >
+        <img src="assets/arrow.png" alt="arrow" />
+      </div>
+      <div
+        class="gallery__arrow-icon gallery__arrow--right"
+        (click)="scroll('right')"
+      >
+        <img src="assets/arrow.png" alt="arrow" />
+      </div>
+    </div>
+  </div>
+</div>
