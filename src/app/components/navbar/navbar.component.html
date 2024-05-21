@@ -36,19 +36,19 @@
 
 <ng-template #navbarLinks let-links>
   <ul class="app__navbar-links">
-    <li class="p__opensans">
+    <li (click)="closeMenu()" class="p__opensans">
       <a href="#home">Home</a>
     </li>
-    <li class="p__opensans">
+    <li (click)="closeMenu()" class="p__opensans">
       <a href="#about">About</a>
     </li>
-    <li class="p__opensans">
+    <li (click)="closeMenu()" class="p__opensans">
       <a href="#menu">Menu</a>
     </li>
-    <li class="p__opensans">
+    <li (click)="closeMenu()" class="p__opensans">
       <a href="#awards">Awards</a>
     </li>
-    <li class="p__opensans">
+    <li (click)="closeMenu()" class="p__opensans">
       <a href="#contact">Contact</a>
     </li>
   </ul>

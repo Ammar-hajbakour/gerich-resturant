@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { SubHeadingComponent } from '../sub-heading/sub-heading.component';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsapTo } from '../../services/scroll-animations';
+
 
 
 @Component({
@@ -16,11 +16,10 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('infoSection') infoSection!: ElementRef<HTMLDivElement>;
   @ViewChild('imageSection') imageSection!: ElementRef<HTMLDivElement>;
 
-  constructor() {
-    gsap.registerPlugin(ScrollTrigger);
-  }
+
   ngAfterViewInit(): void {
-    this.scrollAnimation()
+    gsapTo(this.infoSection.nativeElement, { 'yPercent': '50', 'opacity': '0' }, '-50 top', '')
+    gsapTo(this.imageSection.nativeElement, { 'xPercent': '50', 'rotation': '115', 'scale': '0.5', 'opacity': '0' }, '-50 top', '')
   }
   ngOnInit() {
 

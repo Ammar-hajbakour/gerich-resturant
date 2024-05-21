@@ -5,9 +5,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--color-black);
+  // background: var(--color-black);
   padding: 1rem 6rem;
-
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
   @media screen and (max-width: 1440px){
     padding: 1rem 2rem;
   }
