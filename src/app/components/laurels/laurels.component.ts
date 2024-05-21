@@ -27,8 +27,8 @@ export class LaurelsComponent implements AfterViewInit {
     })
   }
   ngAfterViewInit() {
-    gsapFromTo(this.imageSection.nativeElement, { 'xPercent': '10', 'opacity': '0' }, { 'xPercent': '0', 'opacity': '1' })
-    gsapFromTo(this.infoSection.nativeElement, { 'xPercent': '-10', 'opacity': '0' }, { 'xPercent': '0', 'opacity': '1' })
+    gsapFromTo(this.imageSection.nativeElement, { 'xPercent': '-10', 'opacity': '0' }, { 'xPercent': '0', 'opacity': '1' })
+    gsapFromTo(this.infoSection.nativeElement, { 'yPercent': '-10', 'opacity': '0' }, { 'yPercent': '0', 'opacity': '1' })
     gsapFromTo(this.imageSection.nativeElement, { 'yPercent': '0', 'opacity': '1' }, { 'yPercent': '20', 'opacity': '0' }, '75% center', 'bottom top')
     gsapFromTo(this.infoSection.nativeElement, { 'yPercent': '0', 'opacity': '1' }, { 'yPercent': '20', 'opacity': '0' }, '75% center', 'bottom top')
   }

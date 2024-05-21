@@ -1,11 +1,10 @@
 import { AfterViewInit, Component, DestroyRef, ElementRef, OnInit, ViewChild, inject, signal } from '@angular/core';
 import { SubHeadingComponent } from '../sub-heading/sub-heading.component';
 import { Drink } from '../../models/drink';
-import { Award } from '../../models/award';
 import { DataService, CName } from '../../services/data.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MenuItemComponent } from '../menu-item/menu-item.component';
-import { gsapFromTo } from '../../services/scroll-animations';
+import { gsapFrom } from '../../services/scroll-animations';
 
 @Component({
   selector: 'app-special-menu',
@@ -51,8 +50,9 @@ export class SpecialMenuComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    gsapFromTo(this.menuImage.nativeElement, { 'opacity': 0, 'delay': '0.5' }, { 'opacity': '1', 'delay': '0.5' })
-    gsapFromTo(this.wineSection.nativeElement, { 'x': '150', 'opacity': '0' }, { 'x': '0', 'opacity': '1' })
-    gsapFromTo(this.cocktailSection.nativeElement, { 'x': '-150', 'opacity': '0' }, { 'x': '0', 'opacity': '1' })
+
+    gsapFrom(this.menuImage.nativeElement, { 'y': '50', 'opacity': 0, 'delay': '0.5' })
+    gsapFrom(this.wineSection.nativeElement, { 'xPercent': '-50', 'opacity': '0' })
+    gsapFrom(this.cocktailSection.nativeElement, { 'xPercent': '50', 'opacity': '0' })
   }
 }
